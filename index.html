@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit S K | Terminal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-rain"></canvas>
+    
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="terminal-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="prompt">root@portfolio:~#</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link"><span class="prompt">$</span> ./home.sh</a></li>
+                <li><a href="#about" class="nav-link"><span class="prompt">$</span> ./about.sys</a></li>
+                <li><a href="#skills" class="nav-link"><span class="prompt">$</span> ./skills.mtrx</a></li>
+                <li><a href="#experience" class="nav-link"><span class="prompt">$</span> ./experience.log</a></li>
+                <li><a href="#services" class="nav-link"><span class="prompt">$</span> ./services.arsnl</a></li>
+                <li><a href="#contact" class="nav-link"><span class="prompt">$</span> ./contact.enc</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="#home" class="mobile-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+        <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i><span>Skills</span></a>
+        <a href="#experience" class="mobile-nav-link"><i class="fas fa-history"></i><span>Experience</span></a>
+        <a href="#services" class="mobile-nav-link"><i class="fas fa-tools"></i><span>Services</span></a>
+        <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">visitor@portfolio: ~/portfolio</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-output" id="terminal-output">
+                        <p class="system-msg">> initializing portfolio v2.0...</p>
+                        <p class="system-msg">> system check: <span class="success">OK</span></p>
+                        <p class="system-msg">> loading modules...</p>
+                        <p class="system-msg">> <span class="success">✓</span> ready</p>
+                        <br>
+                        <p class="greeting">Welcome, <span class="highlight">visitor</span></p>
+                        <h1 class="hero-name">MOHIT S K</h1>
+                        <p class="hero-title">
+                            <span class="typing-text" id="typing-text"></span>
+                            <span class="cursor-blink">|</span>
+                        </p>
+                        <br>
+                        <p class="command-hint">Type <span class="cmd">'help'</span> for available commands</p>
+                        <br>
+                        <div class="terminal-input-line">
+                            <span class="prompt">visitor@portfolio:~$</span>
+                            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false">
+                        </div>
+                        <div class="command-output" id="command-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll_down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./system_info.sh</h2>
+            </div>
+            <div class="terminal-card">
+                <div class="card-header">
+                    <span class="status-dot"></span>
+                    <span>SYSTEM_DIAGNOSTIC.exe</span>
+                </div>
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">> NAME:</span>
+                            <span class="info-value">Mohit S K</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">> LOCATION:</span>
+                            <span class="info-value">Tamil Nadu, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">> EDUCATION:</span>
+                            <span class="info-value">B.Tech CSE @ SRMIST (2023-2027)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">> STATUS:</span>
+                            <span class="info-value status-online">● Online</span>
+                        </div>
+                    </div>
+                    <div class="about-description">
+                        <p>Passionate cybersecurity enthusiast and ethical hacking practitioner with hands-on experience in penetration testing, security tools (Metasploit, Aircrack-ng), and Linux systems. Skilled in Python scripting and vulnerability assessment.</p>
+                        <p>Currently pursuing B.Tech in Computer Science and Engineering at SRM Institute of Science and Technology. Completed internship at Prompt InfoTech and workshops on Ethical Hacking and Bug Bounty through Hack Secure.</p>
+                        <div class="interests">
+                            <span class="interest-tag"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                            <span class="interest-tag"><i class="fas fa-code"></i> Web Dev</span>
+                            <span class="interest-tag"><i class="fas fa-laptop"></i> PC Building</span>
+                            <span class="interest-tag"><i class="fas fa-bug"></i> Bug Bounty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./skill_matrix.exe</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90">
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Semantic markup, modern CSS, responsive design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75">
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">ES6+, DOM manipulation, async/await</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70">
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Scripting, automation, security tools</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Web Security</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="65">
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">OWASP Top 10, vulnerability assessment</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-terminal"></i>
+                        <span>Penetration Testing</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="60">
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Metasploit, Nmap, Burp Suite</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="65">
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Express.js, REST APIs, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./mission_log.txt</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2024 - Present</span>
+                            <span class="timeline-status status-active">● Active</span>
+                        </div>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Freelancing</p>
+                        <p class="timeline-description">Building responsive web applications, e-commerce platforms, and custom solutions for clients worldwide.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Aug 2024</span>
+                            <span class="timeline-status">Completed</span>
+                        </div>
+                        <h3 class="timeline-title">Cybersecurity Intern</h3>
+                        <p class="timeline-company">Prompt InfoTech</p>
+                        <p class="timeline-description">Gained hands-on experience with security tools, penetration testing methodologies, and vulnerability assessment.</p>
+                        <div class="tech-stack">
+                            <span>Metasploit</span>
+                            <span>Wireshark</span>
+                            <span>Kali Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2023 - Present</span>
+                            <span class="timeline-status status-active">● Active</span>
+                        </div>
+                        <h3 class="timeline-title">PC Building Specialist</h3>
+                        <p class="timeline-company">Freelancing</p>
+                        <p class="timeline-description">Custom PC builds, upgrades, gaming rigs, and system optimization services.</p>
+                        <div class="tech-stack">
+                            <span>Hardware</span>
+                            <span>BIOS</span>
+                            <span>Windows</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./academic_records.db</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <span class="education-date">2023 - 2027</span>
+                        <h3>B.Tech Computer Science & Engineering</h3>
+                        <p class="education-school">SRM Institute of Science and Technology</p>
+                        <p class="education-description">Pursuing undergraduate degree in Computer Science with focus on cybersecurity and software development.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <span class="education-date">2022 - 2023</span>
+                        <h3>Senior Secondary (12th Grade)</h3>
+                        <p class="education-school">Tagore Public School</p>
+                        <p class="education-description">Completed higher secondary education with focus on Computer Science and Mathematics.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="education-content">
+                        <span class="education-date">2010 - 2020</span>
+                        <h3>Secondary School (10th Grade)</h3>
+                        <p class="education-school">Maharishi International Residential School</p>
+                        <p class="education-description">Completed secondary education with excellent academic record.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./arsenal_list.arsnl</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Custom websites and web applications built with modern technologies. Responsive, fast, and secure.</p>
+                    <ul class="service-features">
+                        <li>Frontend Development</li>
+                        <li>Backend Development</li>
+                        <li>Full Stack Solutions</li>
+                        <li>E-commerce Platforms</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="service-title">Cybersecurity</h3>
+                    <p class="service-description">Comprehensive security assessments and consulting to protect your digital assets from threats.</p>
+                    <ul class="service-features">
+                        <li>Vulnerability Assessment</li>
+                        <li>Penetration Testing</li>
+                        <li>Security Audits</li>
+                        <li>Security Consulting</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">PC Building</h3>
+                    <p class="service-description">Custom PC builds tailored to your needs. Gaming rigs, workstations, and custom configurations.</p>
+                    <ul class="service-features">
+                        <li>Custom Builds</li>
+                        <li>System Upgrades</li>
+                        <li>Performance Optimization</li>
+                        <li>Hardware Consultation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3 class="service-title">Bug Bounty</h3>
+                    <p class="service-description">Systematic identification and reporting of security vulnerabilities through rigorous testing.</p>
+                    <ul class="service-features">
+                        <li>Web App Testing</li>
+                        <li>API Security</li>
+                        <li>Bug Reports</li>
+                        <li>Remediation Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title"><span class="prompt">$</span> ./secure_channel.enc</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="terminal-card">
+                        <div class="card-header">
+                            <span class="status-dot status-warning"></span>
+                            <span>CONTACT_CHANNELS.exe</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:mohit17717@gmail.com" class="contact-value">mohit17717@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+917418634741" class="contact-value">+91 7418634741</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Tamil Nadu, India</span>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="terminal-card">
+                        <div class="card-header">
+                            <span class="status-dot status-encrypted"></span>
+                            <span>ENCRYPTED_MESSAGE.bin</span>
+                        </div>
+                        <div class="card-body">
+                            <form id="contact-form" class="terminal-form">
+                                <div class="form-group">
+                                    <label><span class="prompt">></span> sender_identity</label>
+                                    <input type="text" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><span class="prompt">></span> return_address</label>
+                                    <input type="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><span class="prompt">></span> message_payload</label>
+                                    <textarea name="message" rows="5" placeholder="Type your message..." required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">./send_message.sh</span>
+                                    <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+                                </button>
+                            </form>
+                            <div class="form-status" id="form-status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="prompt">root@portfolio:~#</span>
+                    <span class="footer-name">Mohit S K</span>
+                </div>
+                <p class="footer-copyright">
+                    <span class="prompt">©</span> 2024-2026 | All systems operational
+                </p>
+                <div class="footer-tech">
+                    <span>Built with</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Terminal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
